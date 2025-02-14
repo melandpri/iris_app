@@ -5,6 +5,8 @@ import pandas as pd
 
 st.write ("Bienvenue sur mon jeu de données Iris ")
 
+st.subheader("Mon tableau de bord ")
+
 long_petal = st.sidebar.slider("longueur du petal ",0.0,10.0)
 larg_petal = st.sidebar.slider("largeur du petal ",0.0,10.0)
 long_sepal = st.sidebar.slider("longueur du sepal ",0.0,10.0)
