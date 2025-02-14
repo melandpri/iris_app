@@ -8,6 +8,6 @@ st.sidebar.slider("largeur du sepal ",0.0,10.0)
 
 
 
-if st.button("mon_bouton",type="primary"):
+if st.sidebar.button("mon_bouton",type="primary"):
   st.write("result")
 st.write("mon app")
