@@ -1,5 +1,6 @@
 import streamlit as st
 st.write ("Bienvenue sur mon jeu de données Iris ")
-with st.sidebar:
-  st[length]
+
+if st.button("mon_bouton")
+  st.write("result")
 st.write("mon app")
