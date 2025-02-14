@@ -16,7 +16,12 @@ if st.sidebar.button("predict",type="primary"):
   modele = joblib.load("iris_modele.pk1")
   normalise = joblib.load("normaliser_data.pk1")
   #convertir mes données recupérer de l'utilisateur en tableau
-features = np.array([long_sepal,larg_sepal,long_petal,larg_petal])
+features = np.array([[long_sepal,larg_sepal,long_petal,larg_petal]])
 #ajout des titre de colonnes
 X =pd.DataFrame(features, columns=['SepalLength', 'SepalWidth', 'PetalLength', 'PetalWidth'])
 #on normalise les données que le user a entré 
+X_transform = normalise.transform(X)
+#je predicte mes données 
+prediction = modele.predict(X_transform)
+reponse_modele = prediction[0]
+st.write("votre fleur: ",reponse_modele)
