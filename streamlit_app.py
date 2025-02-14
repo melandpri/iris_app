@@ -7,23 +7,27 @@ st.write ("Bienvenue sur mon jeu de données Iris ")
 
 st.subheader("Mon tableau de bord ")
 
+#je recuperer les données entrer par l'utilisateur dans mes variables long_petal ....
+
 long_petal = st.sidebar.slider("longueur du petal ",0.0,10.0)
 larg_petal = st.sidebar.slider("largeur du petal ",0.0,10.0)
 long_sepal = st.sidebar.slider("longueur du sepal ",0.0,10.0)
 larg_sepal = st.sidebar.slider("largeur du sepal ",0.0,10.0)
 
 
-
+#des que je clique sur le bouton 
 if st.sidebar.button("predict",type="primary"):
+  #je charges mes mon modèle ,et le fichier qui normalisera les données recuperer de l'utilisateur
   modele = joblib.load("iris_modele.pk1")
   normalise = joblib.load("normaliser_data.pk1")
-  #convertir mes données recupérer de l'utilisateur en tableau
+  #je convertis mes données recupérer de l'utilisateur en tableau
   features = np.array([[long_sepal,larg_sepal,long_petal,larg_petal]])
-  #ajout des titre de colonnes
+  #ajout des titre de colonnes,ici je cherche a recupérer mes données pour constituer mon dataframe 
   X =pd.DataFrame(features, columns=['SepalLength', 'SepalWidth', 'PetalLength', 'PetalWidth'])
-  #on normalise les données que le user a entré 
+  #on normalise Ces données que le user a entré 
   X_transform = normalise.transform(X)
   #je predicte mes données 
   prediction = modele.predict(X_transform)
+  #je recupère juste le nom de la fleur  et j affiche le résultat 
   reponse_modele = prediction[0]
   st.write("votre fleur: ",reponse_modele)
