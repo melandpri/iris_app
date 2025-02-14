@@ -17,4 +17,6 @@ if st.sidebar.button("predict",type="primary"):
   normalise = joblib.load("normaliser_data.pk1")
   #convertir mes données recupérer de l'utilisateur en tableau
 features = np.array([long_sepal,larg_sepal,long_petal,larg_petal])
-
+#ajout des titre de colonnes
+X = pd.DataFrame(features,columns=["SepalLength","SepalWidth","PetalLength","PetalWidth"])
+#on normalise les données que le user a entré 
