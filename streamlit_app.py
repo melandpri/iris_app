@@ -24,7 +24,7 @@ if selected=="AED":
     if st.checkbox["afficher jeu de données"]:
         st.text("Affichage du jeu de données")
 #les images des fleurs 
-st.image(Image.open(os.path.join('iris_setosa.jpg)))
+st.image(Image.open(os.path.join('iris_setosa.jpg')))
 
 
               
