@@ -36,17 +36,14 @@ import pandas as pd
 import streamlit as st
 
 # jeu de données 
-jeu_donnees = 'Iris.xlsx'
+import pandas as pd
 
-def explorer_donnees(dataset):
-    chemin_absolu = os.path.abspath(dataset)
-    print(f"Chemin absolu du fichier : {chemin_absolu}")  # Affiche le chemin pour vérifier
-    donnees = pd.read_excel(dataset)  # Charger les données
-    return donnees
-
-if st.checkbox("image des données"):
-    donnees = explorer_donnees(jeu_donnees)
-    st.write(donnees)
+# Tester si Pandas peut ouvrir le fichier
+try:
+    donnees = pd.read_excel('Iris.xlsx')
+    print(donnees.head())  # Affiche les premières lignes du dataframe
+except Exception as e:
+    print(f"Erreur : {e}")
 
 
         
