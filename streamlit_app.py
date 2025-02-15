@@ -30,15 +30,15 @@ if selected=="AED":
         st.image("iris_versicolor.jpg")
         #st.image("iris_viginica.jpg")
    if st.checkbox("afficher jeu de données"):
-        st.text("Affichage du jeu de données")
-        #jeu de données 
+       st.text("Affichage du jeu de données")
+       #jeu de données 
         
-        # Tester si Pandas peut ouvrir le fichier
-        try:
-            donnees = pd.read_excel('Iris.xlsx')
-            print(donnees.head())  # Affiche les premières lignes du dataframe
-        except Exception as e:
-            print(f"Erreur : {e}")
+       # Tester si Pandas peut ouvrir le fichier
+       try:
+           donnees = pd.read_excel('Iris.xlsx')
+           print(donnees.head())  # Affiche les premières lignes du dataframe
+       except Exception as e:
+           print(f"Erreur : {e}")
 
 
         
