@@ -6,11 +6,11 @@ from streamlit_option_menu import option_menu
 
 with st.sidebar: 
     selected = option_menu (
-        menu_title = None,
-        option  =["Accueil" ,"EDA","predictions"]
-        icons = ["house" , "bar-chart","activity"]
-        menu_icon = "cast",
-        default_index =0,
+        menu_title=None,
+        option=["Accueil" ,"EDA","predictions"],
+        icons=["house" , "bar-chart","activity"],
+        menu_icon="cast",
+        default_index=0,
     )
     if selected == "Accueil": 
         st.title (f"Bienvenue sur la page accueil { selected}")
