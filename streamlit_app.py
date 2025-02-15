@@ -7,7 +7,7 @@ from streamlit_option_menu import option_menu
 with st.sidebar: 
     selected=option_menu(
         menu_title=None,
-        options=["Accueil" ,"ADE","predictions"],
+        options=["Accueil" ,"AED","predictions"],
         icons=["house" , "bar-chart","activity"],
         menu_icon="cast",
         default_index=0,
@@ -15,7 +15,8 @@ with st.sidebar:
 if selected == "Accueil": 
     st.title (f"Bienvenue sur la page accueil { selected}")
 if selected == "ADE": 
-    st.title (f"Bienvenue sur la page de la visualisation de données  { selected}")
+    st.title (f"Bienvenue sur la page de l'analyse exporatoire des données { selected}")
+    st.text("construit avec streamlit")
 if selected == "Predictions": 
     st.title (f"Bienvenue sur ma page de preditions  { selected}") 
 
