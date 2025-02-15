@@ -31,19 +31,12 @@ if selected=="AED":
         #st.image("iris_viginica.jpg")
     if st.checkbox("afficher jeu de données"):
         st.text("Affichage du jeu de données")    
-        # Tester si Pandas peut ouvrir le fichier
-        try:
-            donnees = pd.read_excel('Iris.xlsx')
-            print(donnees.head())  # Affiche les premières lignes du dataframe
-        except Exception as e:
-            print(f"Erreur : {e}")
-  
+       
 
         # jeu de données 
-        import os
-        st.write(f"Répertoire actuel : {os.getcwd()}")  # Affiche le répertoire actuel
+        
 
-        jeu_donnees = '/mount/src/iris_app/Iris.xlsx'
+        jeu_donnees = 'iris.csv'
 
         def explorer_donnees(dataset):
             chemin_absolu = os.path.abspath(dataset)
@@ -58,12 +51,7 @@ if selected=="AED":
             donnees = explorer_donnees(jeu_donnees)
             if donnees is not None:
                 st.write(donnees)
-        uploaded_file = st.file_uploader("Choisir un fichier", type=["xlsx"])
-
-        if uploaded_file is not None:
-            donnees = pd.read_excel(uploaded_file)
-            st.write(donnees)
-
+       
 
 
         
