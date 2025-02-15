@@ -45,8 +45,7 @@ if selected=="AED":
 
         #Affichage des graphes 
         if st.checkbox("Diagramme circulaire"):
-            st.write(donnees.plot(kind='pie'))
-            st.pyplot()
+            
 
 
 
