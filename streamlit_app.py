@@ -3,6 +3,9 @@ import joblib
 import numpy as np
 import pandas as pd
 from streamlit_option_menu import option_menu
+import Image from PIL 
+import os 
+
 
 with st.sidebar: 
     selected=option_menu(
@@ -16,9 +19,13 @@ if selected=="Accueil":
     st.title (f"Bienvenue sur la page accueil { selected}")
 if selected=="AED": 
     st.title (f"Bienvenue sur la page de l'analyse exploratoire des données { selected}")
-    st.write("construit avec streamlit")
     st.header("Application AED")
-    st.subheader("Application AED")
+    st.subheader("Notre jeu de données")
+    if st.checkbox["afficher jeu de données"]:
+        st.text("Affichage du jeu de données")
+#les images des fleurs 
+st.image(Image.open(os.path.join('iris_setosa.jpg)))
+
 
               
 if selected == "Predictions": 
