@@ -3,7 +3,7 @@ import joblib
 import numpy as np
 import pandas as pd
 from streamlit_option_menu import option_menu
-import Image from PIL 
+from PIL import Image  
 import os 
 
 
