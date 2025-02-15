@@ -26,7 +26,6 @@ if selected == "Predictions":
 
 st.write ("Bienvenue sur mon jeu de données Iris ")
 
-st.subheader("Mon tableau de bord ")
 
 #je recuperer les données entrer par l'utilisateur dans mes variables long_petal ....
 
@@ -37,7 +36,7 @@ larg_sepal = st.slider("largeur du sepal ",0.0,10.0)
 
 
 #des que je clique sur le bouton 
-if st.sidebar.button("predict",type="primary"):
+if st.button("predict",type="primary"):
   #je charges mes mon modèle ,et le fichier qui normalisera les données recuperer de l'utilisateur
   modele = joblib.load("iris_modele.pk1")
   normalise = joblib.load("normaliser_data.pk1")
