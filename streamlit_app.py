@@ -12,12 +12,12 @@ with st.sidebar:
         menu_icon="cast",
         default_index=0,
     )
-    if selected == "Accueil": 
-        st.title (f"Bienvenue sur la page accueil { selected}")
-   if selected == "EDA": 
-        st.title (f"Bienvenue sur la page de la visualisation de données  { selected}")
-    if selected == "Predictions": 
-        st.title (f"Bienvenue sur ma page de preditions  { selected}") 
+if selected == "Accueil": 
+    st.title (f"Bienvenue sur la page accueil { selected}")
+if selected == "EDA": 
+    st.title (f"Bienvenue sur la page de la visualisation de données  { selected}")
+if selected == "Predictions": 
+    st.title (f"Bienvenue sur ma page de preditions  { selected}") 
 
 st.write ("Bienvenue sur mon jeu de données Iris ")
 
