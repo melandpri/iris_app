@@ -2,6 +2,8 @@ import streamlit as st
 import joblib
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt 
+import seaborn as sns
 from streamlit_option_menu import option_menu
 from PIL import Image  
 import os 
@@ -28,6 +30,16 @@ if selected=="AED":
         st.image("iris_setosa.jpg")
         st.image("iris_versicolor.jpg")
         #st.image("iris_viginica.jpg")
+#jeu de données 
+jeu_donnees='Iris.xlsx'
+
+def explorer_donnees(dataset):
+    donnees=pd.read_excel(os.path.join(dataset))
+    return df 
+if st.checkbox("image des données"):
+    donnees = explorer_donnees(jeu_donnees)
+    st.write(donnees)
+
         
 
 
@@ -36,7 +48,6 @@ if selected=="AED":
 if selected == "Predictions": 
     st.title (f"Bienvenue sur ma page de preditions  { selected}") 
 
-st.write ("Bienvenue sur mon jeu de données Iris ")
 
 
 #je recuperer les données entrer par l'utilisateur dans mes variables long_petal ....
