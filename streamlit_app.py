@@ -23,21 +23,22 @@ if selected=="AED":
     st.title (f"Bienvenue sur la page de l'analyse exploratoire des données { selected}")
     st.header("Application AED")
     st.subheader("Notre jeu de données")
-    if st.checkbox("afficher jeu de données"):
-        st.text("Affichage du jeu de données")
+    
     if st.checkbox("voir les fleurs"):
         #les images des fleurs 
         st.image("iris_setosa.jpg")
         st.image("iris_versicolor.jpg")
         #st.image("iris_viginica.jpg")
-#jeu de données 
-
-# Tester si Pandas peut ouvrir le fichier
-try:
-    donnees = pd.read_excel('Iris.xlsx')
-    print(donnees.head())  # Affiche les premières lignes du dataframe
-except Exception as e:
-    print(f"Erreur : {e}")
+   if st.checkbox("afficher jeu de données"):
+        st.text("Affichage du jeu de données")
+        #jeu de données 
+        
+        # Tester si Pandas peut ouvrir le fichier
+        try:
+            donnees = pd.read_excel('Iris.xlsx')
+            print(donnees.head())  # Affiche les premières lignes du dataframe
+        except Exception as e:
+            print(f"Erreur : {e}")
 
 
         
