@@ -58,6 +58,11 @@ if selected=="AED":
             donnees = explorer_donnees(jeu_donnees)
             if donnees is not None:
                 st.write(donnees)
+        uploaded_file = st.file_uploader("Choisir un fichier", type=["xlsx"])
+
+        if uploaded_file is not None:
+            donnees = pd.read_excel(uploaded_file)
+            st.write(donnees)
 
 
 
