@@ -21,7 +21,7 @@ if selected=="AED":
     st.title (f"Bienvenue sur la page de l'analyse exploratoire des données { selected}")
     st.header("Application AED")
     st.subheader("Notre jeu de données")
-    if st.checkbox["afficher jeu de données"]:
+    if st.checkbox("afficher jeu de données"):
         st.text("Affichage du jeu de données")
 #les images des fleurs 
 st.image(Image.open(os.path.join('iris_setosa.jpg')))
