@@ -2,6 +2,22 @@ import streamlit as st
 import joblib
 import numpy as np
 import pandas as pd
+from streamlit_option_menu import option_menu 
+
+with st.sidebar: 
+    selected = option_menu (
+        menu_title = None,
+        option  =["Accueil" ,"EDA","predictions"]
+        icons = ["house" , "bar-chart","activity"]
+        menu_icon = "cast",
+        default_index =0,
+    )
+    if selected == "Accueil": 
+        st.title (f"Bienvenue sur la page accueil { selected}")
+   if selected == "EDA": 
+        st.title (f"Bienvenue sur la page de la visualisation de données  { selected}")
+    if selected == "Predictions": 
+        st.title (f"Bienvenue sur ma page de preditions  { selected}") 
 
 st.write ("Bienvenue sur mon jeu de données Iris ")
 
