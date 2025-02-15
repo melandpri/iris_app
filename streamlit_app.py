@@ -37,6 +37,25 @@ if selected=="AED":
             print(donnees.head())  # Affiche les premières lignes du dataframe
         except Exception as e:
             print(f"Erreur : {e}")
+  
+
+        # jeu de données 
+        jeu_donnees = 'Iris.xlsx'
+
+        def explorer_donnees(dataset):
+            chemin_absolu = os.path.abspath(dataset)
+        if not os.path.exists(chemin_absolu):  # Vérifier si le fichier existe
+            print(f"Le fichier {chemin_absolu} n'existe pas.")
+            return None
+        print(f"Chemin absolu du fichier : {chemin_absolu}")  # Affiche le chemin pour vérifier
+        donnees = pd.read_excel(dataset)  # Charger les données
+        return donnees
+
+      if st.checkbox("image des données"):
+          donnees = explorer_donnees(jeu_donnees)
+          if donnees is not None:
+              st.write(donnees)
+
 
 
         
