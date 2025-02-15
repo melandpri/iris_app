@@ -37,11 +37,10 @@ if selected=="AED":
             return donnees
         donnees = explorer_donnees(jeu_donnees)
         if st.checkbox("image des données"):
-            
             if donnees is not None:
                 st.write(donnees)
-        #Affichage des graphes 
-        if st.checkbox("Diagramme circulaire"):        
+#Affichage des graphes 
+st.checkbox("Diagramme circulaire")        
 if selected == "Predictions": 
     st.title (f"Bienvenue sur ma page de { selected}")
 #je recuperer les données entrer par l'utilisateur dans mes variables long_petal ....
