@@ -2,10 +2,10 @@ import streamlit as st
 import joblib
 import numpy as np
 import pandas as pd
-from streamlit_option_menu import option_menu 
+from streamlit_option_menu import option_menu
 
 with st.sidebar: 
-    selected = option_menu (
+    selected =option_menu(
         menu_title=None,
         option=["Accueil" ,"ADE","predictions"],
         icons=["house" , "bar-chart","activity"],
