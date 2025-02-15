@@ -31,22 +31,12 @@ if selected=="AED":
         #st.image("iris_viginica.jpg")
     if st.checkbox("afficher jeu de données"):
         st.text("Affichage du jeu de données")    
-       
-
         # jeu de données 
-        
-
         jeu_donnees = 'iris.csv'
 
         def explorer_donnees(dataset):
-            chemin_absolu = os.path.abspath(dataset)
-            if not os.path.exists(chemin_absolu):  # Vérifier si le fichier existe
-                st.write(f"Le fichier {chemin_absolu} n'existe pas.")
-                return None
-            st.write(f"Chemin absolu du fichier : {chemin_absolu}")  # Affiche le chemin pour vérifier
             donnees = pd.read_csv(dataset)  # Charger les données
             return donnees
-
         if st.checkbox("image des données"):
             donnees = explorer_donnees(jeu_donnees)
             if donnees is not None:
