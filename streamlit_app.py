@@ -40,6 +40,9 @@ if selected=="AED":
   
 
         # jeu de données 
+        import os
+        st.write(f"Répertoire actuel : {os.getcwd()}")  # Affiche le répertoire actuel
+
         jeu_donnees = 'Iris.xlsx'
 
         def explorer_donnees(dataset):
