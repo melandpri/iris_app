@@ -16,7 +16,7 @@ if selected == "Accueil":
     st.title (f"Bienvenue sur la page accueil { selected}")
 if selected == "ADE": 
     st.title (f"Bienvenue sur la page de l'analyse exporatoire des données { selected}")
-    st.text("construit avec streamlit")
+    st.write("construit avec streamlit")
     st.header("Application AED")
     st.subheader("Application AED")
 
