@@ -51,10 +51,10 @@ if selected=="AED":
         donnees = pd.read_excel(dataset)  # Charger les données
         return donnees
 
-      if st.checkbox("image des données"):
-          donnees = explorer_donnees(jeu_donnees)
-          if donnees is not None:
-              st.write(donnees)
+        if st.checkbox("image des données"):
+            donnees = explorer_donnees(jeu_donnees)
+            if donnees is not None:
+                st.write(donnees)
 
 
 
