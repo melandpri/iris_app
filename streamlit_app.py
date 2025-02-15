@@ -23,9 +23,13 @@ if selected=="AED":
     st.subheader("Notre jeu de données")
     if st.checkbox("afficher jeu de données"):
         st.text("Affichage du jeu de données")
-#les images des fleurs 
-st.image("iris_setosa.jpg")
-#st.image(Image.open(os.path.join('iris_setosa.jpg')))
+    if st.checkbox("voir les fleurs"):
+        #les images des fleurs 
+        st.image("iris_setosa.jpg")
+        st.image("iris_versicolor.jpg")
+        st.image("iris_viginica.jpg")
+        
+
 
 
               
