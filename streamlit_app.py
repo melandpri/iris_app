@@ -19,6 +19,7 @@ with st.sidebar:
     )
 if selected=="Accueil": 
     st.title (f"Bienvenue sur la page { selected}")
+    
 if selected=="AED": 
     st.title (f"Bienvenue sur la page de l'analyse exploratoire des données")
     st.header("Application AED")
@@ -38,9 +39,7 @@ if selected=="AED":
         donnees = explorer_donnees(jeu_donnees)
         if st.checkbox("image des données"):
             if donnees is not None:
-                st.write(donnees)
-#Affichage des graphes 
-st.checkbox("Diagramme circulaire")        
+                st.write(donnees)      
 if selected == "Predictions": 
     st.title (f"Bienvenue sur ma page de { selected}")
 #je recuperer les données entrer par l'utilisateur dans mes variables long_petal ....
