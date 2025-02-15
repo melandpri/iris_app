@@ -43,7 +43,7 @@ if selected=="AED":
         import os
         st.write(f"Répertoire actuel : {os.getcwd()}")  # Affiche le répertoire actuel
 
-        jeu_donnees = 'Iris.xlsx'
+        jeu_donnees = '/mount/src/iris_app/Iris.xlsx'
 
         def explorer_donnees(dataset):
             chemin_absolu = os.path.abspath(dataset)
