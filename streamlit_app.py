@@ -42,10 +42,10 @@ if selected=="AED":
             if donnees is not None:
                 st.write(donnees)
 
-#Affichage des graphes 
-if st.checkbox("Diagramme circulaire"):
-    st.write(donnees.plot(kind='pie'))
-    st.pyplot()
+        #Affichage des graphes 
+        if st.checkbox("Diagramme circulaire"):
+            st.write(donnees.plot(kind='pie'))
+            st.pyplot()
 
 
 
