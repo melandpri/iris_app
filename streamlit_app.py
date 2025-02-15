@@ -5,7 +5,7 @@ import pandas as pd
 from streamlit_option_menu import option_menu
 
 with st.sidebar: 
-    selected =option_menu(
+    selected=option_menu(
         menu_title=None,
         option=["Accueil" ,"ADE","predictions"],
         icons=["house" , "bar-chart","activity"],
@@ -14,7 +14,7 @@ with st.sidebar:
     )
 if selected == "Accueil": 
     st.title (f"Bienvenue sur la page accueil { selected}")
-if selected == "EDA": 
+if selected == "ADE": 
     st.title (f"Bienvenue sur la page de la visualisation de données  { selected}")
 if selected == "Predictions": 
     st.title (f"Bienvenue sur ma page de preditions  { selected}") 
