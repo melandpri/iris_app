@@ -12,7 +12,7 @@ import os
 with st.sidebar: 
     selected=option_menu(
         menu_title=None,
-        options=["Accueil" ,"AED","predictions"],
+        options=["Accueil" ,"AED","Predictions"],
         icons=["house" , "bar-chart","activity"],
         menu_icon="cast",
         default_index=0,
