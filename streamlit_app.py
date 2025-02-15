@@ -32,17 +32,22 @@ if selected=="AED":
         #st.image("iris_viginica.jpg")
 #jeu de données 
 import os
-jeu_donnees='Iris.xlsx'
+import pandas as pd
+import streamlit as st
 
-print(os.path.abspath(jeu_donnees))  # Affiche le chemin absolu du fichier
-
+# jeu de données 
+jeu_donnees = 'Iris.xlsx'
 
 def explorer_donnees(dataset):
-    donnees=pd.read_excel(os.path.join(dataset))
-    return donnees 
+    chemin_absolu = os.path.abspath(dataset)
+    print(f"Chemin absolu du fichier : {chemin_absolu}")  # Affiche le chemin pour vérifier
+    donnees = pd.read_excel(dataset)  # Charger les données
+    return donnees
+
 if st.checkbox("image des données"):
     donnees = explorer_donnees(jeu_donnees)
     st.write(donnees)
+
 
         
 
