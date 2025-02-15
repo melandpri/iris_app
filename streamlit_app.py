@@ -27,7 +27,7 @@ if selected=="AED":
         #les images des fleurs 
         st.image("iris_setosa.jpg")
         st.image("iris_versicolor.jpg")
-        st.image("iris_virginica.jpg")
+        st.image("iris_viginica.jpg")
         
 
 
