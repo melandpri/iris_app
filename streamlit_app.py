@@ -31,6 +31,9 @@ if selected=="AED":
         st.image("iris_versicolor.jpg")
         #st.image("iris_viginica.jpg")
 #jeu de données 
+import os
+print(os.path.abspath(jeu_donnees))  # Affiche le chemin absolu du fichier
+
 jeu_donnees='Iris.xlsx'
 
 def explorer_donnees(dataset):
