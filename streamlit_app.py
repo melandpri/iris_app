@@ -31,12 +31,6 @@ if selected=="AED":
         st.image("iris_versicolor.jpg")
         #st.image("iris_viginica.jpg")
 #jeu de données 
-import os
-import pandas as pd
-import streamlit as st
-
-# jeu de données 
-import pandas as pd
 
 # Tester si Pandas peut ouvrir le fichier
 try:
