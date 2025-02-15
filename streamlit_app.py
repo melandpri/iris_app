@@ -25,10 +25,10 @@ st.subheader("Mon tableau de bord ")
 
 #je recuperer les données entrer par l'utilisateur dans mes variables long_petal ....
 
-long_petal = st.sidebar.slider("longueur du petal ",0.0,10.0)
-larg_petal = st.sidebar.slider("largeur du petal ",0.0,10.0)
-long_sepal = st.sidebar.slider("longueur du sepal ",0.0,10.0)
-larg_sepal = st.sidebar.slider("largeur du sepal ",0.0,10.0)
+long_petal = st.slider("longueur du petal ",0.0,10.0)
+larg_petal = st.slider("largeur du petal ",0.0,10.0)
+long_sepal = st.slider("longueur du sepal ",0.0,10.0)
+larg_sepal = st.slider("largeur du sepal ",0.0,10.0)
 
 
 #des que je clique sur le bouton 
