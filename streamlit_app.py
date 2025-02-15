@@ -18,12 +18,11 @@ with st.sidebar:
         default_index=0,
     )
 if selected=="Accueil": 
-    st.title (f"Bienvenue sur la page accueil { selected}")
+    st.title (f"Bienvenue sur la page { selected}")
 if selected=="AED": 
     st.title (f"Bienvenue sur la page de l'analyse exploratoire des données")
     st.header("Application AED")
     st.subheader("Notre jeu de données")
-    
     if st.checkbox("voir les fleurs"):
         #les images des fleurs 
         st.image("iris_setosa.jpg")
@@ -33,7 +32,6 @@ if selected=="AED":
         st.text("Affichage du jeu de données")    
         # jeu de données 
         jeu_donnees = 'iris.csv'
-
         def explorer_donnees(dataset):
             donnees = pd.read_csv(dataset)  # Charger les données
             return donnees
@@ -42,46 +40,36 @@ if selected=="AED":
             
             if donnees is not None:
                 st.write(donnees)
-
         #Affichage des graphes 
-        if st.checkbox("Diagramme circulaire"):
-            
-
-
-
-
-
-        
-
-
-
-              
-if selected == "Predictions": 
-    st.title (f"Bienvenue sur ma page de preditions  { selected}") 
-
-
-
-    #je recuperer les données entrer par l'utilisateur dans mes variables long_petal ....
+        if st.checkbox("Diagramme circulaire"):        
+if selected == "Predictions":
+    st.title(f"Bienvenue sur ma page de {selected}")
     
-    long_petal = st.slider("longueur du petal ",0.0,10.0)
-    larg_petal = st.slider("largeur du petal ",0.0,10.0)
-    long_sepal = st.slider("longueur du sepal ",0.0,10.0)
-    larg_sepal = st.slider("largeur du sepal ",0.0,10.0)
-    
-    
-    #des que je clique sur le bouton 
-    if st.button("predict",type="primary"):
-      #je charges mes mon modèle ,et le fichier qui normalisera les données recuperer de l'utilisateur
-      modele = joblib.load("iris_modele.pk1")
-      normalise = joblib.load("normaliser_data.pk1")
-      #je convertis mes données recupérer de l'utilisateur en tableau
-      features = np.array([[long_sepal,larg_sepal,long_petal,larg_petal]])
-      #ajout des titre de colonnes,ici je cherche a recupérer mes données pour constituer mon dataframe 
-      X =pd.DataFrame(features, columns=['SepalLength', 'SepalWidth', 'PetalLength', 'PetalWidth'])
-      #on normalise Ces données que le user a entré 
-      X_transform = normalise.transform(X)
-      #je predicte mes données 
-      prediction = modele.predict(X_transform)
-      #je recupère juste le nom de la fleur  et j affiche le résultat 
-      reponse_modele = prediction[0]
-      st.write("votre fleur: ",reponse_modele)
+    # Récupérer les données entrées par l'utilisateur dans les variables
+    long_petal = st.slider("Longueur du pétale", 0.0, 10.0)
+    larg_petal = st.slider("Largeur du pétale", 0.0, 10.0)
+    long_sepal = st.slider("Longueur du sépale", 0.0, 10.0)
+    larg_sepal = st.slider("Largeur du sépale", 0.0, 10.0)
+
+    # Dès que je clique sur le bouton
+    if st.button("Prédire", type="primary"):
+        # Charger mon modèle et le fichier de normalisation des données
+        modele = joblib.load("iris_modele.pk1")
+        normalise = joblib.load("normaliser_data.pk1")
+
+        # Convertir les données récupérées de l'utilisateur en tableau
+        features = np.array([[long_sepal, larg_sepal, long_petal, larg_petal]])
+
+        # Ajouter les titres des colonnes et constituer le DataFrame
+        X = pd.DataFrame(features, columns=['SepalLength', 'SepalWidth', 'PetalLength', 'PetalWidth'])
+
+        # Normaliser les données que l'utilisateur a entrées
+        X_transform = normalise.transform(X)
+
+        # Faire la prédiction avec le modèle
+        prediction = modele.predict(X_transform)
+
+        # Récupérer juste le nom de la fleur et afficher le résultat
+        reponse_modele = prediction[0]
+        st.write("Votre fleur : ", reponse_modele)
+
