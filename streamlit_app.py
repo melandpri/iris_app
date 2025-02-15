@@ -45,9 +45,9 @@ if selected=="AED":
         def explorer_donnees(dataset):
             chemin_absolu = os.path.abspath(dataset)
             if not os.path.exists(chemin_absolu):  # Vérifier si le fichier existe
-                print(f"Le fichier {chemin_absolu} n'existe pas.")
+                st.write(f"Le fichier {chemin_absolu} n'existe pas.")
                 return None
-            print(f"Chemin absolu du fichier : {chemin_absolu}")  # Affiche le chemin pour vérifier
+            st.write(f"Chemin absolu du fichier : {chemin_absolu}")  # Affiche le chemin pour vérifier
             donnees = pd.read_excel(dataset)  # Charger les données
             return donnees
 
