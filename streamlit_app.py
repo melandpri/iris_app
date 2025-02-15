@@ -32,9 +32,10 @@ if selected=="AED":
         #st.image("iris_viginica.jpg")
 #jeu de données 
 import os
+jeu_donnees='Iris.xlsx'
+
 print(os.path.abspath(jeu_donnees))  # Affiche le chemin absolu du fichier
 
-jeu_donnees='Iris.xlsx'
 
 def explorer_donnees(dataset):
     donnees=pd.read_excel(os.path.join(dataset))
