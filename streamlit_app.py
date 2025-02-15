@@ -7,7 +7,7 @@ from streamlit_option_menu import option_menu
 with st.sidebar: 
     selected = option_menu (
         menu_title=None,
-        option=["Accueil" ,"EDA","predictions"],
+        option=["Accueil" ,"ADE","predictions"],
         icons=["house" , "bar-chart","activity"],
         menu_icon="cast",
         default_index=0,
