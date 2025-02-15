@@ -38,10 +38,15 @@ if selected=="AED":
             donnees = pd.read_csv(dataset)  # Charger les données
             return donnees
         if st.checkbox("image des données"):
-            st.dataFrame(donnees)
             donnees = explorer_donnees(jeu_donnees)
             if donnees is not None:
                 st.write(donnees)
+
+#Affichage des graphes 
+if st.checkbox("Diagramme circulaire"):
+    st.write(donnees.plot(kind='pie')
+    st.pyplot()
+
 
 
 
