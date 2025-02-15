@@ -35,7 +35,7 @@ jeu_donnees='Iris.xlsx'
 
 def explorer_donnees(dataset):
     donnees=pd.read_excel(os.path.join(dataset))
-    return df 
+    return donnees 
 if st.checkbox("image des données"):
     donnees = explorer_donnees(jeu_donnees)
     st.write(donnees)
