@@ -44,7 +44,7 @@ if selected=="AED":
                 st.write(f"Le fichier {chemin_absolu} n'existe pas.")
                 return None
             st.write(f"Chemin absolu du fichier : {chemin_absolu}")  # Affiche le chemin pour vérifier
-            donnees = pd.read_excel(dataset)  # Charger les données
+            donnees = pd.read_csv(dataset)  # Charger les données
             return donnees
 
         if st.checkbox("image des données"):
