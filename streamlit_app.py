@@ -12,10 +12,10 @@ with st.sidebar:
         menu_icon="cast",
         default_index=0,
     )
-if selected == "Accueil": 
+if selected=="Accueil": 
     st.title (f"Bienvenue sur la page accueil { selected}")
-if selected == "ADE": 
-    st.title (f"Bienvenue sur la page de l'analyse exporatoire des données { selected}")
+if selected=="AED": 
+    st.title (f"Bienvenue sur la page de l'analyse exploratoire des données { selected}")
     st.write("construit avec streamlit")
     st.header("Application AED")
     st.subheader("Application AED")
